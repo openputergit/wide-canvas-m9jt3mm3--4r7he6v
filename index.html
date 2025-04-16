@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboPlayZone - Play | Learn | Innovate</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #7c3aed;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link:hover {
+            color: var(--primary-color);
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="hero-title text-2xl font-bold gradient-text">RoboPlayZone</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#partner" class="nav-link">Partner With Us</a>
+                    <a href="#shop" class="nav-link">Shop</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden">
+            <div class="px-4 py-2 space-y-3">
+                <a href="#home" class="block">Home</a>
+                <a href="#about" class="block">About Us</a>
+                <a href="#partner" class="block">Partner With Us</a>
+                <a href="#shop" class="block">Shop</a>
+                <a href="#contact" class="block">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-12 bg-gradient-to-r from-blue-500 to-purple-600">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-white">
+                    <h1 class="hero-title text-4xl md:text-6xl font-bold mb-4">
+                        Play | Learn | Innovate
+                    </h1>
+                    <p class="text-xl mb-8">
+                        Welcome to RoboPlayZone – a thrilling tech-infused experience zone where futuristic games meet boundless creativity.
+                    </p>
+                    <button class="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-blue-100 transition-all">
+                        Book Now
+                    </button>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0">
+                    <lottie-player
+                        src="https://assets5.lottiefiles.com/packages/lf20_rqoanwfy.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100%; height: 400px;"
+                        loop
+                        autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center card-hover">
+                    <h3 class="text-4xl font-bold gradient-text">25,000+</h3>
+                    <p class="text-gray-600">Participants Engaged</p>
+                </div>
+                <div class="text-center card-hover">
+                    <h3 class="text-4xl font-bold gradient-text">10+</h3>
+                    <p class="text-gray-600">Cities Covered</p>
+                </div>
+                <div class="text-center card-hover">
+                    <h3 class="text-4xl font-bold gradient-text">100+</h3>
+                    <p class="text-gray-600">School & College Fests</p>
+                </div>
+                <div class="text-center card-hover">
+                    <h3 class="text-4xl font-bold gradient-text">20+</h3>
+                    <p class="text-gray-600">Corporate Events</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Meet the Minds Behind RoboPlayZone</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+                    <p class="text-gray-600 mb-6">
+                        RoboPlayZone was founded with a mission to make cutting-edge technology accessible and exciting for all ages.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="bi bi-check-circle-fill text-blue-500"></i>
+                            <span>Spark curiosity and joy through play</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="bi bi-check-circle-fill text-blue-500"></i>
+                            <span>Empower through hands-on experience</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="bi bi-check-circle-fill text-blue-500"></i>
+                            <span>Stay ahead with futuristic games</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <lottie-player
+                        src="https://assets9.lottiefiles.com/packages/lf20_xua5jzav.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100%; height: 300px;"
+                        loop
+                        autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Section -->
+    <section id="partner" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Partner With Us</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                    <i class="bi bi-calendar-event text-4xl text-blue-500"></i>
+                    <h3 class="text-xl font-bold mt-4 mb-2">Book RoboPlayZone</h3>
+                    <p class="text-gray-600">
+                        Bring the excitement to your campus, mall, or venue. We handle the setup, you enjoy the buzz!
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                    <i class="bi bi-building text-4xl text-purple-500"></i>
+                    <h3 class="text-xl font-bold mt-4 mb-2">B2B Collaborations</h3>
+                    <p class="text-gray-600">
+                        Work with us for tech-based activations, custom setups, or educational workshops.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                    <i class="bi bi-shop text-4xl text-blue-500"></i>
+                    <h3 class="text-xl font-bold mt-4 mb-2">Franchise Opportunities</h3>
+                    <p class="text-gray-600">
+                        Join our network and run your own RoboPlayZone in your city.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Let's Talk Tech!</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Phone</label>
+                            <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Message</label>
+                            <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" rows="4"></textarea>
+                        </div>
+                        <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-all">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                        <div class="space-y-3">
+                            <p class="flex items-center space-x-3">
+                                <i class="bi bi-envelope"></i>
+                                <span>sales@roboplayzone.com</span>
+                            </p>
+                            <p class="flex items-center space-x-3">
+                                <i class="bi bi-telephone"></i>
+                                <span>+91-7666451946</span>
+                            </p>
+                            <p class="flex items-center space-x-3">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Baner, Pune</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.instagram.com/roboplayzone/" target="_blank" class="text-2xl hover:text-purple-600">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/share/165mMYkuZN/" target="_blank" class="text-2xl hover:text-blue-600">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/showcase/robo-playzone/" target="_blank" class="text-2xl hover:text-blue-600">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@RoboPlayZone" target="_blank" class="text-2xl hover:text-red-600">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <p>© 2024 RoboPlayZone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            form.reset();
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
